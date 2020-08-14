@@ -15,7 +15,10 @@ Starbucks Meal Planner a web application that creates an optimal meal plan that 
 `yarn start`
 
 # How it works:
-User fills information about his body: weight, height, age, gender and activity level. These parameters are sent as a POST request to :5000/diet that is redirected to the flask server. Optimal macronutritional needs (calories, fat, proteins, carbs) are calculated according to some smart formula taken from some health journal. Then stochastic optimization algorithm is run to find the most suitable meal plan for the user. Optimal meal are chosen according to the following rules: each meal must include at least one drink and one food item, using food items more than once must be descouraged, daily nutritional values must be close to the user's nutritional needs. Genetic algorithm is used to run optimization, the best meal plan is presented to the user.
+- User fills information about his body: weight, height, age, gender and activity level. These parameters are sent as a POST request to :5000/diet that is redirected to the flask server.   
+- Optimal macronutritional needs (calories, fat, proteins, carbs) are calculated according to some smart formula taken from some health journal. Then stochastic optimization algorithm is run to find the most suitable meal plan for the user.   
+- Optimal meal are chosen according to the following rules: each meal must include at least one drink and one food item, using food items more than once must be descouraged, daily nutritional values must be close to the user's nutritional needs.   
+- Genetic algorithm is used to run optimization, the best meal plan is presented to the user.
 
 ### Key technologies used:
 Flask, React
