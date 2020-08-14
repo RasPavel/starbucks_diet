@@ -1,68 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Starbucks Meal Planner
 
-## Available Scripts
+### What is it?
+Starbucks Meal Planner a web application that creates an optimal meal plan that consists exclusively of Starbucks menu items. Based on the user's weight, height and other parameters the app estimates macronutrient needs and runs stochastic optimization algorithm to produce a balanced, healthy and diverse meal plan for a week. 
 
-In the project directory, you can run:
+### How to run this app:
 
-### `yarn start`
+0) Install the latest versions of yarn and node (>= 1.22.4 and v14.3.0 respectively) 
+1) Clone the repository
+2) Install the project dependencies  
+`yarn install`
+3) Start Flask development server at localhost:5000
+`yarn start-api`
+4) Start React development server and navigate to localhost:3000  
+`yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# How it works:
+User fills information about his body: weight, height, age, gender and activity level. These parameters are sent as a POST request to :5000/diet that is redirected to the flask server. Optimal macronutritional needs (calories, fat, proteins, carbs) are calculated according to some smart formula taken from some health journal. Then stochastic optimization algorithm is run to find the most suitable meal plan for the user. Optimal meal are chosen according to the following rules: each meal must include at least one drink and one food item, using food items more than once must be descouraged, daily nutritional values must be close to the user's nutritional needs. Genetic algorithm is used to run optimization, the best meal plan is presented to the user.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Key technologies used:
+Flask, React
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
