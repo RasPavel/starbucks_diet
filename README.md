@@ -3,6 +3,9 @@
 ### What is it?
 Starbucks Meal Planner a web application that creates an optimal meal plan that consists exclusively of Starbucks menu items. Based on the user's weight, height and other parameters the app estimates macronutrient needs and runs stochastic optimization algorithm to produce a balanced, healthy and diverse meal plan for a week. 
 
+### Promo video:
+https://youtu.be/gPVgOLktCT4
+
 ### How to run this app:
 
 0) Install the latest versions of yarn and node (>= 1.22.4 and v14.3.0 respectively) 
